@@ -1,4 +1,6 @@
 import { IMyClass } from "models";
+import Stateful from "dojo/Stateful";
+import declare from "dojo/_base/declare";
 
 interface MyClass extends IMyClass {}
 class MyClass {
@@ -10,4 +12,4 @@ class MyClass {
     }
 }
 
-export default MyClass;
+export default declare([Stateful], MyClass);

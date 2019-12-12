@@ -1,5 +1,5 @@
-import { Stateful } from "dojo/Stateful";
+/// <reference path="../dojo.d.ts" />
 
-declare module "models" {
-    export interface IMyClass extends Stateful {}
-}
+import Stateful from "dojo/Stateful";
+
+export interface IMyClass extends Stateful {}

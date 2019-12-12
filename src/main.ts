@@ -1,4 +1,4 @@
-import MyClass from "./models/MyClass";
+import MyClass from "models/MyClass";
 
 const x = new MyClass();
 x.set('name', 'Hello, Dojo!');
