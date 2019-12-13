@@ -3,9 +3,10 @@ import _WidgetBase from "dijit/_WidgetBase";
 import _TemplatedMixin from "dijit/_TemplatedMixin";
 import domConstruct from "dojo/dom-construct";
 import dojo_declare from "dojo/_base/declare";
+import { IMyClass } from "./models/models";
 
 export default function main() {
-    const x = new MyClass();
+    const x: IMyClass = new MyClass();
     x.set('name', 'Hello, Dojo!');
     alert(x.get("name"));
 
