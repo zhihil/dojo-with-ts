@@ -3,35 +3,21 @@
     <head>
         <title>Hello, Dojo!</title>
         <meta charset="utf-8">
-    </head>
-    <body>
 
-        <script src="src/dojo/dojo.js"></script>
-
-        <div id="widget"></div>
-
-        <script>
-            require(['src/models/MyClass.js', 'dijit/_WidgetBase', 'dijit/_TemplatedMixin', 'dojo/dom-construct',
-                'dojo/_base/declare'
-            ], ({ default: MyClass }, _WidgetBase, _TemplatedMixin, declare) => {
-                const x = new MyClass();
-                console.log(x.get('name'));
-
-                const Widget = declare([_WidgetBase, _TemplatedMixin], {
-                    templateString: '<div>Hello, world!</div>'
-                });
-
-                const widj = new Widget();
-                domConstruct.placeAt(widj.domNode, 'widget');
-                widj.startup();
-            });
-        </script>
-        
         <script>
             dojoConfig= {
                 async: true
             };
         </script>
-
+        <script src="src/dojo/dojo.js"></script>
+    </head>
+    <body>
+        <div id="widget"></div>
+        
+        <script>
+            require(["./src/main.js"], (imp) => {
+                imp.main();
+            });
+        </script>
     </body>
 </html>
