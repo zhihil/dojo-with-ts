@@ -2,3 +2,4 @@ dojo
 dojox
 dijit
 node_modules
+static/src/*

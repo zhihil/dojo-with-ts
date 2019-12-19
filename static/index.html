@@ -13,10 +13,12 @@
     </head>
     <body>
         <div id="widget"></div>
+
+        <div data-dojo-type="views/view"></div>
         
         <script>
-            require(["./src/main.js"], (imp) => {
-                imp.main();
+            require(["./src/main.js", "views/view", "dojo/domReady!"], imp => {
+                imp.default();
             });
         </script>
     </body>
